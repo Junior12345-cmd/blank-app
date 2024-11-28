@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 
 
 st.title("🎈 Analyse des données Iris")
@@ -42,20 +41,6 @@ if file is not None:
         for col in numeric_columns:
             fig, ax = plt.subplots()
             df[col].plot(kind='hist', bins=20, title=f"Distribution de {col}", ax=ax)
-            st.pyplot(fig)
-
-
-    # Visualisation interactive
-    st.subheader("Graphiques interactifs")
-    if len(numeric_columns) >= 2:
-        x_axis = st.selectbox("Sélectionnez l'axe X", numeric_columns)
-        y_axis = st.selectbox("Sélectionnez l'axe Y", numeric_columns)
-        if x_axis and y_axis:
-            fig, ax = plt.subplots()
-            ax.scatter(df[x_axis], df[y_axis], alpha=0.7)
-            ax.set_xlabel(x_axis)
-            ax.set_ylabel(y_axis)
-            ax.set_title(f"{y_axis} vs {x_axis}")
             st.pyplot(fig)
 
     # Affichage des valeurs manquantes
