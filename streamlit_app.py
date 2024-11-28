@@ -10,7 +10,7 @@ st.write(
 
 # En-tête de l'application (rendu avec Markdown)
 '''
-# :earth_americas: TP Streamlit Dashboards
+# :earth_americas: TP Streamlit Dashboards réalisé par Junior SANNI(Master IFRI 2024-2025)
 '''
 
 # Ajout d'un espace vide pour une mise en page plus aérée
@@ -45,6 +45,7 @@ if file is not None:
             fig, ax = plt.subplots()
             df[col].plot(kind='hist', bins=20, title=f"Distribution de {col}", ax=ax)
             st.pyplot(fig)
+
 
     # Visualisation interactive
     st.subheader("Graphiques interactifs")
