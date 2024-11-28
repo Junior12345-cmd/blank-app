@@ -4,9 +4,7 @@ import matplotlib.pyplot as plt
 
 
 st.title("🎈 Analyse des données Iris")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+
 
 # En-tête de l'application (rendu avec Markdown)
 '''
